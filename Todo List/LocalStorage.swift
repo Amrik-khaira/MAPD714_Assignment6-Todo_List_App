@@ -6,18 +6,17 @@
 //  Todo List App - Part 3 Gesture control
 //
 //  Created by Amrik on 25/11/22.
-// Version: 1.1
+// Version: 1.2
 
 import Foundation
 import UIKit
 
 class LocalStorage {
-    
     //MARK: - shared instance for Local Storage class
     static let shared = LocalStorage()
     
     //MARK: - User Defaults to check app load first time
-     var isTodoListUpdate: Bool? {
+    var isTodoListUpdate: Bool? {
         get {
             return UserDefaults.standard.bool(forKey: "isTodoListUpdate")
         }
@@ -35,14 +34,13 @@ class LocalStorage {
     //MARK: - Get Saved Items
     func GetSavedItems() -> [ToDoList] {
         if let data = UserDefaults.standard.value(forKey:"TodoList") as? Data {
-         do
-         {
-             return try PropertyListDecoder().decode(Array<ToDoList>.self, from: data)
-         } catch {
-            return [ToDoList]()
-         }
-        }
-        else {
+            do
+            {
+                return try PropertyListDecoder().decode(Array<ToDoList>.self, from: data)
+            } catch {
+                return [ToDoList]()
+            }
+        } else {
             return [ToDoList]()
         }
     }
@@ -54,23 +52,22 @@ extension String {
         attributeString.addAttribute(
             NSAttributedString.Key.strikethroughStyle,
             value: 1,
-                   range:NSMakeRange(0,attributeString.length))
+            range:NSMakeRange(0,attributeString.length))
         return attributeString
     }
 }
 
 
 //MARK: - Display alert with completion
-extension UIViewController
-{
-func displayAlertWithCompletion(title:String,message:String,control:[String],completion:@escaping (String)->()){
-    let alertController = UIAlertController(title: title, message: message, preferredStyle: .alert)
-    for str in control{
-        let alertAction = UIAlertAction(title: str, style: .default, handler: { (action) in
-            completion(str)
-        })
-        alertController.addAction(alertAction)
+extension UIViewController {
+    func displayAlertWithCompletion(title:String,message:String,control:[String],completion:@escaping (String)->()){
+        let alertController = UIAlertController(title: title, message: message, preferredStyle: .alert)
+        for str in control {
+            let alertAction = UIAlertAction(title: str, style: .default, handler: { (action) in
+                completion(str)
+            })
+            alertController.addAction(alertAction)
+        }
+        self.present(alertController, animated: true, completion: nil)
     }
-    self.present(alertController, animated: true, completion: nil)
-}
 }

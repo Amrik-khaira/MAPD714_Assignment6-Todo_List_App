@@ -76,34 +76,29 @@
                                                             <rect key="frame" x="0.0" y="0.0" width="414" height="111"/>
                                                             <subviews>
                                                                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="nbT-oE-iry">
-                                                                    <rect key="frame" x="10" y="5.5" width="345" height="100"/>
+                                                                    <rect key="frame" x="10" y="5.5" width="394" height="100"/>
                                                                     <subviews>
                                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="16" translatesAutoresizingMaskIntoConstraints="NO" id="Cq5-Vs-kUb">
-                                                                            <rect key="frame" x="0.0" y="0.0" width="345" height="50"/>
+                                                                            <rect key="frame" x="0.0" y="0.0" width="394" height="50"/>
                                                                             <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
                                                                             <nil key="textColor"/>
                                                                             <nil key="highlightedColor"/>
                                                                         </label>
                                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2MQ-pf-1pz">
-                                                                            <rect key="frame" x="0.0" y="50" width="345" height="50"/>
+                                                                            <rect key="frame" x="0.0" y="50" width="394" height="50"/>
                                                                             <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                                                             <nil key="textColor"/>
                                                                             <nil key="highlightedColor"/>
                                                                         </label>
                                                                     </subviews>
                                                                 </stackView>
-                                                                <switch opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="s53-eB-Ki1">
-                                                                    <rect key="frame" x="355" y="40" width="51" height="31"/>
-                                                                </switch>
                                                             </subviews>
                                                             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                                             <constraints>
-                                                                <constraint firstAttribute="trailing" secondItem="s53-eB-Ki1" secondAttribute="trailing" constant="10" id="4EY-5B-8sW"/>
                                                                 <constraint firstItem="nbT-oE-iry" firstAttribute="leading" secondItem="kDl-Yr-asa" secondAttribute="leading" constant="10" id="G3j-RZ-d9Q"/>
                                                                 <constraint firstItem="nbT-oE-iry" firstAttribute="centerY" secondItem="kDl-Yr-asa" secondAttribute="centerY" id="T67-Tt-VpU"/>
+                                                                <constraint firstAttribute="trailing" secondItem="nbT-oE-iry" secondAttribute="trailing" constant="10" id="k61-Ms-khi"/>
                                                                 <constraint firstAttribute="height" constant="74" id="tC0-Vc-oMZ"/>
-                                                                <constraint firstItem="s53-eB-Ki1" firstAttribute="centerY" secondItem="kDl-Yr-asa" secondAttribute="centerY" id="wPV-wh-smh"/>
-                                                                <constraint firstItem="s53-eB-Ki1" firstAttribute="leading" secondItem="nbT-oE-iry" secondAttribute="trailing" id="yPy-c3-kQc"/>
                                                             </constraints>
                                                         </view>
                                                     </subviews>
@@ -115,7 +110,6 @@
                                                     </constraints>
                                                 </tableViewCellContentView>
                                                 <connections>
-                                                    <outlet property="SwitchTaskState" destination="s53-eB-Ki1" id="bsF-bd-aRo"/>
                                                     <outlet property="lblLongDes" destination="2MQ-pf-1pz" id="jYS-EG-eVh"/>
                                                     <outlet property="lblShortTitle" destination="Cq5-Vs-kUb" id="A16-Bv-A5B"/>
                                                 </connections>

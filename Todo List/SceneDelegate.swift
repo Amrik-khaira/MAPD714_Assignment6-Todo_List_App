@@ -6,9 +6,8 @@
 //  Todo List App - Part 3 Gesture control
 //
 //  Created by Amrik on 12/11/22.
-// Version: 1.0
-
-
+// Version: 1.2
+ 
 import UIKit
 
 class SceneDelegate: UIResponder, UIWindowSceneDelegate {
